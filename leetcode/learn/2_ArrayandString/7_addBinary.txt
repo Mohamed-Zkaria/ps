@@ -23,6 +23,7 @@ Each string does not contain leading zeros except for the zero itself.
 
 
 
+
 import java.math.BigInteger;
 class Solution {
     public String addBinary(String a, String b) {
