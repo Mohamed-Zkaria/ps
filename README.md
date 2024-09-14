@@ -2,6 +2,6 @@
 repo for coding problems I try to solve.
 
 
-# my solution
+my solution
 ============================================
-# discusstions solutions
+discusstions solutions
