@@ -1,0 +1,46 @@
+https://leetcode.com/explore/learn/card/array-and-string/205/array-two-pointer-technique/1183/
+
+Write a function that reverses a string. The input string is given as an array of characters s.
+
+You must do this by modifying the input array in-place with O(1) extra memory.
+
+ 
+
+Example 1:
+
+Input: s = ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
+Example 2:
+
+Input: s = ["H","a","n","n","a","h"]
+Output: ["h","a","n","n","a","H"]
+ 
+
+Constraints:
+
+1 <= s.length <= 105
+s[i] is a printable ascii character.
+
+
+
+
+
+
+
+
+
+# @param {Character[]} s
+# @return {Void} Do not return anything, modify s in-place instead.
+def reverse_string(s)
+    start_idx = 0
+    end_idx = s.length - 1
+    
+    while start_idx < end_idx
+        s[start_idx], s[end_idx] = s[end_idx], s[start_idx]
+        start_idx += 1
+        end_idx -= 1
+    end
+    s
+end
+
+
