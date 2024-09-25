@@ -1,0 +1,73 @@
+Given a binary array nums, return the maximum number of consecutive 1's in the array.
+
+ 
+
+Example 1:
+
+Input: nums = [1,1,0,1,1,1]
+Output: 3
+Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+Example 2:
+
+Input: nums = [1,0,1,1,0,1]
+Output: 2
+ 
+
+Constraints:
+
+1 <= nums.length <= 105
+nums[i] is either 0 or 1.
+
+
+
+
+
+
+
+
+# @param {Integer[]} nums
+# @return {Integer}
+def find_max_consecutive_ones(nums)
+    i = 0
+    max_length = 0
+    current_length = 0
+    while i < nums.length 
+        if(nums[i] == 1)
+            current_length += 1
+            max_length = current_length if current_length > max_length
+        else
+            current_length = 0
+        end
+        i += 1
+    end
+    max_length
+end
+
+
+
+
+
+
+
+=================================================================================================================
+
+
+
+class Solution {
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int longest, max;
+        longest = max = 0;
+        for (int i = 0; i < nums.length; i++){
+            if( nums[i] == 1){
+                longest+=1;
+                if(longest > max){
+                    max = longest;
+                }
+            } else {
+                longest = 0;
+            }            
+        }
+        
+        return max;
+    }
+}
