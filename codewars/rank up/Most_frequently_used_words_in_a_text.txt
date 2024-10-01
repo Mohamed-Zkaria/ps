@@ -52,7 +52,6 @@ def top_3_words(text)
     new_text += c unless rejected_chars.include? c
   end
   
-  p new_text
   result = []
   
   max1_counter = 0
@@ -66,8 +65,6 @@ def top_3_words(text)
     
   words_counter = Hash.new(0)
   words_arr = new_text.split(" ")
-  p new_text
-  p words_arr
   
   words_arr.each do |word|
     words_counter[word] += 1 unless word == "'" || word == "'''"
