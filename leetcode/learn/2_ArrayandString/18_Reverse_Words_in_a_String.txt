@@ -127,3 +127,15 @@ public class ReverseWords {
         System.out.println(reverseWords("a good   example")); // Output: "example good a"
     }
 }
+
+
+
+
+
+ruby: 
+
+# @param {String} s
+# @return {String}
+def reverse_words(s)
+    s.split(" ").reverse.join(" ").to_s
+end
