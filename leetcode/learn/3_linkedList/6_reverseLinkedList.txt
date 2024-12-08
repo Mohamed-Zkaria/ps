@@ -58,3 +58,24 @@ class Solution {
 
 
 
+
+
+
+
+public ListNode reverseList(ListNode head) {
+    // Base case: if the list is empty or only one node remains
+    if (head == null || head.next == null) {
+        return head;
+    }
+
+    // Recursive step: reverse the rest of the list
+    ListNode reversedHead = reverseList(head.next);
+
+    // Reverse the link between the current node and the next node
+    head.next.next = head; // Point next node's next to the current node
+    head.next = null;      // Set the current node's next to null
+
+    return reversedHead;   // Return the head of the reversed list
+}
+
+
